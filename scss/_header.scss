@@ -1,0 +1,52 @@
+header {
+    display: none;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    position: relative;
+    padding-top: 20px;
+
+    .logo {
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+
+        img {
+            width: auto;
+            object-fit: contain;
+        }
+    }
+
+    .hamBtn {
+        width: auto;
+        height: auto;
+        @include hamBtn;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+
+        &:hover,&:active,&.active {
+
+            i {
+                background: $subFont_3;
+            }
+        }
+
+        i {
+            width: 2rem;
+            height: 0.25rem;
+            background: $hamBtn_Color;
+            transition: 0.3s all;
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        display: flex;
+    }
+}

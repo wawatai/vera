@@ -1,0 +1,898 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "微軟正黑體";
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: "微軟正黑體";
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0;
+  font-family: "微軟正黑體";
+}
+
+select, input {
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "微軟正黑體";
+}
+
+i {
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+main {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+label {
+  display: block;
+}
+
+html {
+  width: 100%;
+  height: auto;
+  background: #1f1f1f;
+}
+html body {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  overflow-x: hidden;
+}
+html body nav {
+  width: 270px;
+  height: 100%;
+  background: #101010;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  padding: 20px 15px 50px 15px;
+  z-index: 100;
+}
+html body nav .flag {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+html body nav .logo {
+  width: auto;
+  height: auto;
+  padding-top: 20px;
+}
+html body nav .logo img {
+  width: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+html body nav ul {
+  width: 100%;
+  height: auto;
+  margin: 60px auto 30px;
+}
+html body nav ul li {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+html body nav ul li:last-child {
+  margin-bottom: 0;
+}
+html body nav ul li a {
+  width: 100%;
+  height: 32px;
+  background: #ffbb17;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  color: #101010;
+  font-size: 0.875rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+html body nav ul li a:hover, html body nav ul li a:active, html body nav ul li a.active {
+  background: #000000;
+  border-color: #ffbb17;
+  color: #ffbb17;
+}
+html body nav .info {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body nav .info a {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 25px;
+}
+html body nav .info a img {
+  width: 100%;
+  height: 100%;
+}
+html body nav .info p {
+  color: #ff9b1f;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 25px;
+}
+html body nav .cancelBtn {
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 100;
+}
+html body nav .cancelBtn::before, html body nav .cancelBtn::after {
+  content: "";
+  position: absolute;
+  width: 0.25rem;
+  height: 2rem;
+  left: 50%;
+  top: 50%;
+  background: #ffffff;
+}
+html body nav .cancelBtn::before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+html body nav .cancelBtn::after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+@media only screen and (max-width: 768px) {
+  html body nav {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  html body nav.display {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  html body nav .cancelBtn {
+    display: block;
+  }
+}
+html body header {
+  display: none;
+  width: 100%;
+  height: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding-top: 20px;
+}
+html body header .logo {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+html body header .logo img {
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+html body header .hamBtn {
+  width: auto;
+  height: auto;
+  background: #ffbb17;
+  border-radius: 5px;
+  border: solid 1px transparent;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  padding: 0.625rem;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 20px;
+}
+html body header .hamBtn:hover, html body header .hamBtn:active, html body header .hamBtn.active {
+  background: #000000;
+  border-color: #ffbb17;
+}
+html body header .hamBtn:hover i, html body header .hamBtn:active i, html body header .hamBtn.active i {
+  background: #ffffff;
+}
+html body header .hamBtn i {
+  width: 2rem;
+  height: 0.25rem;
+  background: #101010;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  margin-bottom: 5px;
+}
+html body header .hamBtn i:last-child {
+  margin: 0;
+}
+@media only screen and (max-width: 768px) {
+  html body header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+html body .mainArea {
+  width: calc(100% - 270px);
+  height: auto;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  padding: 20px;
+}
+html body .mainArea .topList {
+  width: 100%;
+  height: auto;
+  margin: 24px 0;
+}
+html body .mainArea .topList > ul {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+html body .mainArea .topList > ul li {
+  width: auto;
+  height: 34px;
+  background: #000000;
+  border-radius: 5px;
+  border: 1px solid #ffbb17;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  padding: 0 1.25rem;
+  margin-right: 5px;
+}
+html body .mainArea .topList > ul li:hover, html body .mainArea .topList > ul li:active, html body .mainArea .topList > ul li.active {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffb600), to(#ff9b00));
+  background: linear-gradient(to top, #ffb600 0%, #ff9b00 100%);
+  border-color: transparent;
+  color: #101010;
+}
+html body .mainArea .topList > ul li:last-child {
+  margin: 0;
+}
+html body .mainArea .topList .inputBox {
+  width: 100%;
+  height: 0;
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+  opacity: 0;
+  overflow: hidden;
+}
+html body .mainArea .topList .inputBox.display {
+  height: 42px;
+  opacity: 1;
+}
+html body .mainArea .topList .inputBox input {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border: solid 1px #ced4da;
+  border-radius: 5px;
+  color: #495057;
+  font-size: 1rem;
+  font-weight: bold;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  padding-left: 1.25rem;
+}
+html body .mainArea .topList .inputBox input:focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2509803922);
+          box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2509803922);
+}
+html body .mainArea .topList .btnBox {
+  width: 100%;
+  height: 0;
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+  opacity: 0;
+  overflow: hidden;
+}
+html body .mainArea .topList .btnBox.display {
+  height: auto;
+  opacity: 1;
+}
+html body .mainArea .topList .btnBox ul {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+html body .mainArea .topList .btnBox ul li {
+  width: auto;
+  height: 34px;
+  background: #000000;
+  border-radius: 5px;
+  border: 1px solid #ffbb17;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  margin: 0 5px 5px 0;
+  padding: 0 1.25rem;
+}
+html body .mainArea .topList .btnBox ul li:hover, html body .mainArea .topList .btnBox ul li:active, html body .mainArea .topList .btnBox ul li.active {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffb600), to(#ff9b00));
+  background: linear-gradient(to top, #ffb600 0%, #ff9b00 100%);
+  border-color: transparent;
+  color: #101010;
+}
+html body .mainArea .gameBox {
+  width: 100%;
+  height: auto;
+}
+html body .mainArea .gameBox ul {
+  width: 100%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+html body .mainArea .gameBox ul li {
+  width: auto;
+  height: auto;
+  border: 1px solid #ffbb17;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+html body .mainArea .gameBox ul li:hover a .hLayer, html body .mainArea .gameBox ul li:active a .hLayer, html body .mainArea .gameBox ul li.active a .hLayer {
+  opacity: 1;
+}
+html body .mainArea .gameBox ul li:hover a p, html body .mainArea .gameBox ul li:active a p, html body .mainArea .gameBox ul li.active a p {
+  text-decoration-color: #ff4719;
+}
+html body .mainArea .gameBox ul li a {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  position: relative;
+  overflow: hidden;
+}
+html body .mainArea .gameBox ul li a img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+html body .mainArea .gameBox ul li a .hLayer {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8156862745);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  opacity: 0;
+  z-index: 10;
+}
+html body .mainArea .gameBox ul li a .hLayer button {
+  width: 45%;
+  height: 35px;
+  background: #ffbb17;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  color: #101010;
+  font-size: 0.875rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+html body .mainArea .gameBox ul li a .hLayer button:hover, html body .mainArea .gameBox ul li a .hLayer button:active, html body .mainArea .gameBox ul li a .hLayer button.active {
+  background: #000000;
+  border-color: #ffbb17;
+  color: #ffbb17;
+}
+html body .mainArea .gameBox ul li a p {
+  width: 100%;
+  color: #f9d369;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  margin: 8px 0;
+  padding: 0 10px;
+}
+html body .mainArea .bottom {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+html body .mainArea .bottom p {
+  color: #ababab;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.75rem;
+  margin: 5px 0;
+}
+html body .mainArea .bottom p.title {
+  color: #ffbb17;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2.875rem;
+  margin: 0 0 30px;
+}
+html body .mainArea .bottom p.smallTitle {
+  color: #ffbb17;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin: 30px 0;
+}
+html body .mainArea .bottom p.miniTitle {
+  color: #ffbb17;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 30px 0;
+}
+html body .mainArea .bottom p.mar {
+  margin-bottom: 30px;
+}
+html body .mainArea .bottom p span {
+  color: #ffffff;
+  font-weight: bold;
+}
+html body .mainArea .bottom p a {
+  display: inline;
+  color: #008599;
+  text-decoration: underline;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+html body .mainArea .bottom p a:hover, html body .mainArea .bottom p a:active, html body .mainArea .bottom p a.active {
+  color: #ff9b1f;
+}
+@media only screen and (max-width: 1000px) {
+  html body .mainArea .gameBox ul {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (max-width: 650px) {
+  html body .mainArea .gameBox ul {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+html body .swiper {
+  width: 100%;
+}
+html body .swiper .swiper-wrapper {
+  height: auto !important;
+}
+html body .swiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  border-radius: 5px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+html body .loginWrap {
+  width: calc(100% - 270px);
+  height: auto;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .loginWrap .innerBox {
+  width: 100%;
+  height: auto;
+}
+html body .loginWrap .innerBox h1 {
+  color: #ffbb17;
+  font-size: 2.25em;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0;
+}
+html body .loginWrap .innerBox form {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  background: #101010;
+  border-radius: 20px;
+  padding: 20px 30px;
+  margin: 0 auto;
+}
+html body .loginWrap .innerBox form .message {
+  width: 100%;
+  height: auto;
+  background: #1a1a1a;
+  padding: 1.5rem;
+  margin: 0 0 24px 0;
+}
+html body .loginWrap .innerBox form .message p {
+  color: #ababab;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+html body .loginWrap .innerBox form > label {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+html body .loginWrap .innerBox form > label p {
+  color: #ff9b1f;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+html body .loginWrap .innerBox form > label input {
+  width: 100%;
+  height: 32px;
+  background: #ffffff;
+  border: solid 1px #ced4da;
+  border-radius: 5px;
+  color: #495057;
+  font-size: 1rem;
+  font-weight: bold;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  padding-left: 1.25rem;
+  margin: 24px 0;
+}
+html body .loginWrap .innerBox form > label input:focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2509803922);
+          box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2509803922);
+}
+html body .loginWrap .innerBox form .btnArea {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0 20px;
+}
+html body .loginWrap .innerBox form .btnArea label {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .loginWrap .innerBox form .btnArea label.active input::before {
+  display: block;
+}
+html body .loginWrap .innerBox form .btnArea label input {
+  width: 14px;
+  height: 14px;
+  background: #101010;
+  border: solid 1px #ffbb17;
+  position: relative;
+  cursor: pointer;
+  margin: 0 10px 0 0;
+}
+html body .loginWrap .innerBox form .btnArea label input::before {
+  display: none;
+  content: "✓";
+  color: #ffffff;
+  font-size: 0.75rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+html body .loginWrap .innerBox form .btnArea label input:hover {
+  background-color: #ffbb17;
+}
+html body .loginWrap .innerBox form .btnArea label input:hover::before {
+  color: #101010;
+}
+html body .loginWrap .innerBox form .btnArea label p {
+  color: #ff9b1f;
+  font-size: 1rem;
+  font-weight: bold;
+}
+html body .loginWrap .innerBox form .btnArea button {
+  width: auto;
+  height: 42px;
+  background: #ffbb17;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  color: #101010;
+  font-size: 0.875rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 0 1.25rem;
+}
+html body .loginWrap .innerBox form .btnArea button:hover, html body .loginWrap .innerBox form .btnArea button:active, html body .loginWrap .innerBox form .btnArea button.active {
+  background: #000000;
+  border-color: #ffbb17;
+  color: #ffbb17;
+}
+html body .loginWrap .innerBox form ul {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .loginWrap .innerBox form ul li {
+  width: auto;
+  height: auto;
+}
+html body .loginWrap .innerBox form ul li:first-child {
+  border-right: 1px solid #ababab;
+  margin-right: 8px;
+  padding: 0 8px 0 0;
+}
+html body .loginWrap .innerBox form ul li a {
+  color: #008599;
+  font-size: 1.25rem;
+}
+html body .loginWrap .innerBox form ul li a:hover, html body .loginWrap .innerBox form ul li a:active, html body .loginWrap .innerBox form ul li a.active {
+  color: #ff9b1f;
+}
+html body .ruleWrap {
+  width: calc(100% - 270px);
+  height: auto;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  padding: 20px;
+}
+html body .ruleWrap .textBox {
+  width: 1140px;
+  height: auto;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  margin: 0 auto;
+}
+html body .ruleWrap .textBox p {
+  color: #ababab;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.75rem;
+  margin: 10px 0;
+}
+html body .ruleWrap .textBox p.title {
+  color: #ffbb17;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2.875rem;
+  margin: 30px 0;
+}
+html body .ruleWrap .textBox p.smallTitle {
+  color: #ffbb17;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+html body .ruleWrap .textBox p.second {
+  padding-left: 30px;
+}
+html body .ruleWrap .textBox p span {
+  color: #ff4719;
+  font-weight: bold;
+}
+html body .ruleWrap .textBox p a {
+  display: inline;
+  color: #008599;
+}
+@media only screen and (max-width: 1600px) {
+  html body .ruleWrap .textBox {
+    width: 840px;
+  }
+}
+@media only screen and (max-width: 1260px) {
+  html body .ruleWrap .textBox {
+    width: 570px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  html body .ruleWrap .textBox {
+    width: 385px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html body .ruleWrap .textBox {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  html body main {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 650px) {
+  html {
+    font-size: 3vw;
+  }
+}
