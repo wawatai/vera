@@ -363,7 +363,7 @@ html body .mainArea .topList > ul li {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-  padding: 0 1rem;
+  padding: 0 0.875rem;
   margin-right: 5px;
 }
 html body .mainArea .topList > ul li:hover, html body .mainArea .topList > ul li:active, html body .mainArea .topList > ul li.active {
