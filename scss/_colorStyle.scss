@@ -28,7 +28,7 @@ $mainArea_gameBox_filterBG: #000000d0;
     border-radius: 5px;
     border: 1px solid transparent;
     color: #101010;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -38,7 +38,7 @@ $mainArea_gameBox_filterBG: #000000d0;
     &:hover,&:active,&.active {
         background: #000000;
         border-color: #ffbb17;
-        color: #ffbb17;
+        color: #ff4719;
     }
 }
 @mixin mainBtn_2 {
@@ -46,7 +46,7 @@ $mainArea_gameBox_filterBG: #000000d0;
     border-radius: 5px;
     border: 1px solid #ffbb17;
     color: #ffffff;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -91,7 +91,7 @@ $titleColor_1: #ffbb17;
 $mainBorder_1: #ffbb17;
 
 //連結色
-$linkColor_1: #008599;
+$linkColor_1: #00deff;
 
 //共用
 @mixin mainStyle {

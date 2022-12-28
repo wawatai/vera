@@ -177,7 +177,7 @@ html body nav ul li a {
   border-radius: 5px;
   border: 1px solid transparent;
   color: #101010;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,7 +193,7 @@ html body nav ul li a {
 html body nav ul li a:hover, html body nav ul li a:active, html body nav ul li a.active {
   background: #000000;
   border-color: #ffbb17;
-  color: #ffbb17;
+  color: #ff4719;
 }
 html body nav .info {
   width: 100%;
@@ -351,7 +351,7 @@ html body .mainArea .topList > ul li {
   border-radius: 5px;
   border: 1px solid #ffbb17;
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -432,7 +432,7 @@ html body .mainArea .topList .btnBox ul li {
   border-radius: 5px;
   border: 1px solid #ffbb17;
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -520,7 +520,7 @@ html body .mainArea .gameBox ul li a .hLayer button {
   border-radius: 5px;
   border: 1px solid transparent;
   color: #101010;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -538,12 +538,12 @@ html body .mainArea .gameBox ul li a .hLayer button {
 html body .mainArea .gameBox ul li a .hLayer button:hover, html body .mainArea .gameBox ul li a .hLayer button:active, html body .mainArea .gameBox ul li a .hLayer button.active {
   background: #000000;
   border-color: #ffbb17;
-  color: #ffbb17;
+  color: #ff4719;
 }
 html body .mainArea .gameBox ul li a p {
   width: 100%;
   color: #f9d369;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: bold;
   text-align: center;
   overflow: hidden;
@@ -561,7 +561,7 @@ html body .mainArea .bottom {
 }
 html body .mainArea .bottom p {
   color: #ababab;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: bold;
   line-height: 1.75rem;
   margin: 5px 0;
@@ -595,7 +595,7 @@ html body .mainArea .bottom p span {
 }
 html body .mainArea .bottom p a {
   display: inline;
-  color: #008599;
+  color: #00deff;
   text-decoration: underline;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
@@ -687,7 +687,7 @@ html body .loginWrap .innerBox form > label p {
 }
 html body .loginWrap .innerBox form > label input {
   width: 100%;
-  height: 32px;
+  height: 42px;
   background: #ffffff;
   border: solid 1px #ced4da;
   border-radius: 5px;
@@ -697,7 +697,7 @@ html body .loginWrap .innerBox form > label input {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   padding-left: 1.25rem;
-  margin: 24px 0;
+  margin: 10px 0 24px;
 }
 html body .loginWrap .innerBox form > label input:focus {
   -webkit-box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2509803922);
@@ -768,7 +768,7 @@ html body .loginWrap .innerBox form .btnArea button {
   border-radius: 5px;
   border: 1px solid transparent;
   color: #101010;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -786,7 +786,7 @@ html body .loginWrap .innerBox form .btnArea button {
 html body .loginWrap .innerBox form .btnArea button:hover, html body .loginWrap .innerBox form .btnArea button:active, html body .loginWrap .innerBox form .btnArea button.active {
   background: #000000;
   border-color: #ffbb17;
-  color: #ffbb17;
+  color: #ff4719;
 }
 html body .loginWrap .innerBox form ul {
   width: 100%;
@@ -805,7 +805,7 @@ html body .loginWrap .innerBox form ul li:first-child {
   padding: 0 8px 0 0;
 }
 html body .loginWrap .innerBox form ul li a {
-  color: #008599;
+  color: #00deff;
   font-size: 1.25rem;
 }
 html body .loginWrap .innerBox form ul li a:hover, html body .loginWrap .innerBox form ul li a:active, html body .loginWrap .innerBox form ul li a.active {
@@ -855,7 +855,7 @@ html body .ruleWrap .textBox p span {
 }
 html body .ruleWrap .textBox p a {
   display: inline;
-  color: #008599;
+  color: #00deff;
 }
 @media only screen and (max-width: 1600px) {
   html body .ruleWrap .textBox {
