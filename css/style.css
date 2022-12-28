@@ -251,7 +251,7 @@ html body nav .cancelBtn::after {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   html body nav {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
@@ -317,7 +317,7 @@ html body header .hamBtn i {
 html body header .hamBtn i:last-child {
   margin: 0;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   html body header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -609,6 +609,12 @@ html body .mainArea .bottom p a:hover, html body .mainArea .bottom p a:active, h
     grid-template-columns: repeat(4, 1fr);
   }
 }
+@media only screen and (max-width: 850px) {
+  html body .mainArea .gameBox ul {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media only screen and (max-width: 650px) {
   html body .mainArea .gameBox ul {
     -ms-grid-columns: (1fr)[2];
@@ -872,12 +878,12 @@ html body .ruleWrap .textBox p a {
     width: 385px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   html body .ruleWrap .textBox {
     width: 80%;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   html body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
